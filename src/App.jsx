@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import "./App.scss"; 
 import "./style/themes.scss";
@@ -9,7 +10,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [theme, setTheme] = useState("theme-dark");
@@ -27,31 +27,31 @@ function App() {
 
   return (
     <div className={theme}>
-        <SpeedInsights />
 
       <button onClick={toggleTheme}>Schimbă Tema</button>
       <div className="container">
-      <Profile />
-      <AnimatePresence mode="wait">
-      <motion.div
-            key={activeSection}
-            variants={flipVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="content"
-          >
-        {activeSection === "about" && <About />}
-        {activeSection === "experience" && <Experience />}    
-        {activeSection === "skills" && <Skills />}  
-        {activeSection === "contact" && <Contact />}   
-        </motion.div>
+        <Profile />
+        <AnimatePresence mode="wait">
+        <motion.div
+              key={activeSection}
+              variants={flipVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="content"
+            >
+          {activeSection === "about" && <About />}
+          {activeSection === "experience" && <Experience />}    
+          {activeSection === "skills" && <Skills />}  
+          {activeSection === "contact" && <Contact />}   
+          </motion.div>
 
-      </AnimatePresence>
+        </AnimatePresence>
       
-      <Navbar setActiveSection={setActiveSection} />
+        <Navbar setActiveSection={setActiveSection} />
       </div>
-      
+      <SpeedInsights />
+
     </div>
   );
 }
