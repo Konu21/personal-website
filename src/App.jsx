@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [theme, setTheme] = useState("theme-dark");
@@ -27,6 +27,8 @@ function App() {
 
   return (
     <div className={theme}>
+        <SpeedInsights />
+
       <button onClick={toggleTheme}>Schimbă Tema</button>
       <div className="container">
       <Profile />
@@ -46,7 +48,7 @@ function App() {
         </motion.div>
 
       </AnimatePresence>
-      <SpeedInsights />
+      
       <Navbar setActiveSection={setActiveSection} />
       </div>
       
