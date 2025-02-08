@@ -1,0 +1,32 @@
+$theme-dark: (
+  bg-primary: #17151F,
+  bg-card: #251F35,
+  accent-primary: #9D8CFF,
+  accent-secondary: #6B4FBB,
+  text-primary: #FFFFFF,
+  text-secondary: #B4A5FF,
+  hover:#9d8cff1a
+);
+
+$theme-light: (
+  bg-primary: #FDFBFF,
+  bg-card: #FFFFFF,
+  accent-primary: #6B4FBB,
+  accent-secondary: #9D8CFF,
+  text-primary: #17151F,
+  text-secondary: #6B4FBB,
+  shadow: #E6E1F9,
+  hover: #F3F0FF
+);
+
+// 🔥 Mixin pentru aplicarea temei
+@mixin theme($mode) {
+  $theme-map: if($mode == 'dark', $theme-dark, $theme-light);
+  
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+  
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}

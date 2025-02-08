@@ -1,0 +1,87 @@
+// About.module.scss
+
+.about-card{
+    border: 2px solid var(--accent-primary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2em 5em;
+    @media (min-width: 1440px) {
+        padding: 2em 8em;
+    }
+    @media (max-width: 768px) {
+        padding: 2em 2em;
+    }
+    h2{
+        font-size: 2.5em;
+        color: var(--text-primary);
+        margin-bottom: 1em;
+    }
+    .highlight{
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: var(--text-primary);
+        border-left: 4px solid var(--accent-primary);
+        padding-left: 1.5em;
+        margin-bottom: 2em;
+    }
+    .expertise{
+        display: grid;
+        gap: 2em;
+        margin: 3em 0;
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .expertise-item{
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 1em ;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: var(--bg-card);
+                transform: translateY(-3px);
+            }
+            svg {
+                font-size: 2rem;
+                color: var(--accent-secondary);
+                margin-bottom: 1rem;
+            }
+            h3 {
+                color: var(--text-primary);
+                margin-bottom: 1rem;
+            }
+        
+            p {
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+        }
+    }
+    .philosophy{
+        margin-top: 3rem;
+        border-top: 1px solid var(--accent-secondary);
+        padding-top: 2rem;
+    
+        blockquote p {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+    }
+    .skillTag {
+        background: rgba(var(--accent-primary), 0.1);
+        color: var(--accent-primary);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            background: rgba(var(--accent-primary), 0.2);
+        }
+    }
+}

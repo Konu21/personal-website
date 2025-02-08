@@ -1,0 +1,44 @@
+{
+    "experience": [
+        {
+            "company": "Bertrandt Romania",
+            "position": "Software Developer",
+            "startDate": "February 2022",
+            "endDate": "Present",
+            "summary": "Gained valuable experience in backend (Python, Polars, Dask, Flask) and frontend (Figma) development within an Agile environment. Contributed to component implementation, UI design, and performance optimization while managing tasks using Jira.",
+            "highlights": [
+                "Developed and optimized backend modules using Python, Polars, and Dask.",
+                "Contributed to UI/UX design improvements using Figma.",
+                "Enhanced system performance and scalability.",
+                "Actively participated in Agile sprints and Jira-based task management."
+            ]
+        },
+        {
+            "company": "Electronic Arts - Bucharest",
+            "position": "Game Tester",
+            "startDate": "June 2019",
+            "endDate": "September 2019",
+            "summary": "Tested specific game components, identifying and reporting visual, audio, and control-related bugs. Reproduced errors to verify fixes and contributed to quality assurance before release.",
+            "highlights": [
+                "Reported and documented critical bugs in APEX before release.",
+                "Reproduced and validated fixed issues to ensure stability.",
+                "Performed detailed testing of game mechanics and UI/UX.",
+                "Worked during summer period."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University Politehnica of Bucharest",
+            "profile": "Faculty of Power Engineering - Industrial Informatics",
+            "startDate": "2017",
+            "endDate": "2021"
+        },
+        {
+            "institution": "National College “Zinca Golescu”",
+            "profile": "Mathematics - Informatics",
+            "startDate": "2013",
+            "endDate": "2017"
+        }
+    ]
+}

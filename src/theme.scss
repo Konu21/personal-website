@@ -1,0 +1,36 @@
+// 🎨 Definirea temelor
+$theme-dark: (
+  bg-primary: #17151F,
+  bg-card: #251F35,
+  accent-primary: #9D8CFF,
+  accent-secondary: #6B4FBB,
+  text-primary: #FFFFFF,
+  text-secondary: #B4A5FF
+);
+
+$theme-light: (
+  bg-primary: #FDFBFF,
+  bg-card: #FFFFFF,
+  accent-primary: #6B4FBB,
+  accent-secondary: #9D8CFF,
+  text-primary: #17151F,
+  text-secondary: #6B4FBB,
+  shadow: #E6E1F9,
+  hover: #F3F0FF
+);
+
+// 🔥 Mixin pentru aplicarea temei
+@mixin theme($mode) {
+  $theme-map: if($mode == 'dark', $theme-dark, $theme-light);
+
+  @debug $theme-map; // Verificare pentru debugging
+
+  --bg-primary: map-get($theme-map, bg-primary);
+  --bg-card: map-get($theme-map, bg-card);
+  --accent-primary: map-get($theme-map, accent-primary);
+  --accent-secondary: map-get($theme-map, accent-secondary);
+  --text-primary: map-get($theme-map, text-primary);
+  --text-secondary: map-get($theme-map, text-secondary);
+  --shadow: if($mode == 'dark', none, map-get($theme-map, shadow));
+  --hover: if($mode == 'dark', rgba(157, 140, 255, 0.1), map-get($theme-map, hover));
+}

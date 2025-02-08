@@ -1,0 +1,36 @@
+{
+    "contact_info": [
+        {
+            "type": "phone",
+            "label": "Phone",
+            "value": "+40 760 056 651"
+        },
+        {
+            "type": "email",
+            "label": "Email",
+            "value": "paunbogdan2@gmail.com"
+        },
+        {
+            "type": "location",
+            "label": "Location",
+            "value": "Bucharest"
+        },
+        {
+            "type": "calendar",
+            "label": "Birthday",
+            "value": "22 APR 1998"
+        }
+    ],
+    "social_media": [
+        {
+            "type": "linkedin",
+            "label": "LinkedIn",
+            "value": "https://www.linkedin.com/in/bogdan-paun-1b1b3b1b3/"
+        },
+        {
+            "type": "instagram",
+            "label": "Instagram",
+            "value": ""
+        }
+    ]
+}

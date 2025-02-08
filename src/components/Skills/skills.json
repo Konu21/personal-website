@@ -1,0 +1,42 @@
+{
+    "skills": [
+        {
+            "icon": "src/assets/css-3-svgrepo-com.svg",
+            "name": "CSS"
+        },
+        {
+            "icon": "src/assets/html-svgrepo-com.svg",
+            "name": "HTML"
+        },
+        {
+            "icon": "src/assets/matlab-svgrepo-com.svg",
+            "name": "MATLAB"
+        },
+        {
+            "icon": "src/assets/python-svgrepo-com.svg",
+            "name": "PYTHON"
+        },
+        {
+            "icon": "src/assets/dask_icon_on_pink.svg",
+            "name": "DASK"
+        },
+        {
+            "icon": "src/assets/polars_logo_icon_248809.svg",
+            "name": "POLARS"
+        },
+        {
+            "icon": "src/assets/react.svg",
+            "name": "REACT.JS"
+        }
+    ],
+    "tools": [
+        {
+            "icon": "src/assets/figma-svgrepo-com.svg",
+            "name": "FIGMA"
+        },
+        {
+            "icon": "src/assets/jirasoftware-svgrepo-com.svg",
+            "name": "JIRA"
+        }
+    ]
+}
