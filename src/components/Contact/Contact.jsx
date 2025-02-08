@@ -1,9 +1,26 @@
-import  { useState } from 'react'
+import  { useRef, useState } from 'react'
 
 import './Contact.scss'
 import "../../style/themes.scss";
+import emailjs from '@emailjs/browser';
+
 
 function Contact() {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ikyu9h5', 'template_x3pdavb', form.current, { publicKey: 'pLZdAoBpyw1HHr7YR' })
+    .then((result) => {
+        alert("Your message has been sent successfully!");
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+          alert("Your message has not been sent. Try again please!");
+      });
+      form.current.reset()
+  }
   // eslint-disable-next-line react/prop-types
   const FloatingLabelInput = ({ label, type, name, isTextarea }) => {
     const [value, setValue] = useState("");
@@ -36,11 +53,11 @@ function Contact() {
   };
   
   return (
-   <form action="" className='contact-card'>
+   <form ref={form} action="" className='contact-card' onSubmit={sendEmail}>
     <h2>Contact</h2>
-    <FloatingLabelInput label="Name" type="text" name="name" />
-    <FloatingLabelInput label="Email" type="email" name="email" />
-    <FloatingLabelInput label="Message" type="text" name="message" isTextarea = "True" />
+    <FloatingLabelInput label="Name" type="text" name="from_name" />
+    <FloatingLabelInput label="Email" type="email" name="from_email" />
+    <FloatingLabelInput label="Message" type="text" name="message" isTextarea = {true} />
     <button type="submit" className='submit'>Send</button>
    </form>
   )
