@@ -1,5 +1,5 @@
 // 🎨 Definirea temelor
-@use "./style/themes.scss";
+@use "./style/themes.scss" as *;
 
 // 📌 Aplicarea temei
 .theme-dark {
