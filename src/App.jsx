@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState,useEffect  } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import ToggleButton from "react-toggle-button";
+import { FaSun, FaMoon } from "react-icons/fa";
+import Flag from 'react-world-flags';  // Exemplu cu o bibliotecă de steaguri
+
 
 import "./App.scss"; 
 import "./style/themes.scss";
@@ -13,9 +17,26 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   const [theme, setTheme] = useState("theme-dark");
+  const [lang, setLang] = useState('EN')
 
-  const toggleTheme = () => {
-    setTheme(theme === "theme-dark" ? "theme-light" : "theme-dark");
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+  const getCssVar = (variable) => {
+   return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+  }
+
+  // eslint-disable-next-line react/prop-types
+  const ThemeThumbIcon = ({ isActive }) => (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+      {isActive ? <FaSun color="yellow" size={20} /> : <FaMoon color="white" size={20} />}
+    </div>
+  );
+  
+  const thumbStyle = {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
   };
   const [activeSection, setActiveSection] = useState("about");
 
@@ -26,9 +47,51 @@ function App() {
   };
 
   return (
-    <div className={theme}>
-
-      <button onClick={toggleTheme}>Schimbă Tema</button>
+    <div className={'${theme} ${lang}'}>
+    <div  className='toggle-button'>
+      <ToggleButton inactiveLabel={''}
+        activeLabel={""}
+        thumbIcon={<Flag  code={lang === "EN" ? "GB" : "RO"} className="lang-icon" />}
+        thumbStyle={thumbStyle}
+        thumbAnimateRange={[-10, 36]}
+        
+        colors={{
+          activeThumb: { base: getCssVar("--text-primary") },
+          inactiveThumb: { base: getCssVar("--accent-primary") },
+          active: {
+            base: getCssVar("--accent-primary"),
+            hover: getCssVar("--accent-secondary"),
+          },
+          inactive: {
+            base: getCssVar("--bg-card"),
+            hover: getCssVar("--shadow") || getCssVar("--hover"),
+          },
+        }}
+        value={lang === "EN"}
+        onToggle={() => setLang(lang === "EN" ? "RO" : "EN")}/>
+      <ToggleButton
+        inactiveLabel={''}
+        activeLabel={""}
+        thumbIcon={<ThemeThumbIcon isActive={theme === "theme-light"} />} 
+        thumbStyle={thumbStyle}
+        thumbAnimateRange={[-10, 36]}
+        
+        colors={{
+          activeThumb: { base: getCssVar("--text-primary") },
+          inactiveThumb: { base: getCssVar("--accent-primary") },
+          active: {
+            base: getCssVar("--accent-primary"),
+            hover: getCssVar("--accent-secondary"),
+          },
+          inactive: {
+            base: getCssVar("--bg-card"),
+            hover: getCssVar("--shadow") || getCssVar("--hover"),
+          },
+        }}
+        value={theme === "theme-light"}
+        onToggle={() => setTheme(theme === "theme-dark" ? "theme-light" : "theme-dark")}
+      />
+    </div>
       <div className="container">
         <Profile />
         <AnimatePresence mode="wait">

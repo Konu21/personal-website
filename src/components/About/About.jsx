@@ -10,7 +10,7 @@ function AboutSection() {
     id="about"
     className="about-card"
   >
-        <h2>Despre mine</h2>
+        <h2>About me</h2>
         
           <div className="about-intro">
             <p className="highlight">
