@@ -1,41 +1,41 @@
 {
     "skills": [
         {
-            "icon": "public/css-3-svgrepo-com.svg",
+            "icon": "css-3-svgrepo-com.svg",
             "name": "CSS"
         },
         {
-            "icon": "public/html-svgrepo-com.svg",
+            "icon": "html-svgrepo-com.svg",
             "name": "HTML"
         },
         {
-            "icon": "public/matlab-svgrepo-com.svg",
+            "icon": "matlab-svgrepo-com.svg",
             "name": "MATLAB"
         },
         {
-            "icon": "public/python-svgrepo-com.svg",
+            "icon": "python-svgrepo-com.svg",
             "name": "PYTHON"
         },
         {
-            "icon": "public/dask_icon_on_pink.svg",
+            "icon": "dask_icon_on_pink.svg",
             "name": "DASK"
         },
         {
-            "icon": "public/polars_logo_icon_248809.svg",
+            "icon": "polars_logo_icon_248809.svg",
             "name": "POLARS"
         },
         {
-            "icon": "public/react.svg",
+            "icon": "react.svg",
             "name": "REACT.JS"
         }
     ],
     "tools": [
         {
-            "icon": "public/figma-svgrepo-com.svg",
+            "icon": "figma-svgrepo-com.svg",
             "name": "FIGMA"
         },
         {
-            "icon": "public/jirasoftware-svgrepo-com.svg",
+            "icon": "jirasoftware-svgrepo-com.svg",
             "name": "JIRA"
         }
     ]
