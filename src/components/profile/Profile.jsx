@@ -3,7 +3,7 @@ import './Profile.scss'
 import "../../style/themes.scss";
 
 import contactData from "./contact-info.json";
-import avatar from "../../assets/rb_9123.svg";
+import avatar from "../../../public/rb_9123.svg";
 import {MdPhone, MdEmail, MdLocationOn,MdCalendarMonth  } from "react-icons/md";
 import { FaLinkedin, FaInstagramSquare  } from "react-icons/fa";
 import { useTypewriter } from "react-simple-typewriter";
