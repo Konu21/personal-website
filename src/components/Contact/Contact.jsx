@@ -3,11 +3,11 @@ import  { useRef, useState } from 'react'
 import './Contact.scss'
 import "../../style/themes.scss";
 import emailjs from '@emailjs/browser';
-
+import { useLanguage } from '../Lang/LanguageContext';
 
 function Contact() {
   const form = useRef()
-
+  const { t } = useLanguage();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -55,10 +55,10 @@ function Contact() {
   return (
    <form ref={form} action="" className='contact-card' onSubmit={sendEmail}>
     <h2>Contact</h2>
-    <FloatingLabelInput label="Name" type="text" name="from_name" />
-    <FloatingLabelInput label="Email" type="email" name="from_email" />
-    <FloatingLabelInput label="Message" type="text" name="message" isTextarea = {true} />
-    <button type="submit" className='submit'>Send</button>
+    <FloatingLabelInput label={t.name} type="text" name="from_name" />
+    <FloatingLabelInput label={t.email} type="email" name="from_email" />
+    <FloatingLabelInput label={t.message} type="text" name="message" isTextarea = {true} />
+    <button type="submit" className='submit'>{t.send}</button>
    </form>
   )
 }

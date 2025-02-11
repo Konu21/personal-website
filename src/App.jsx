@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import ToggleButton from "react-toggle-button";
 import { FaSun, FaMoon } from "react-icons/fa";
 import Flag from 'react-world-flags';  // Exemplu cu o bibliotecă de steaguri
-
+import { useLanguage } from "./components/Lang/LanguageContext";
 
 import "./App.scss"; 
 import "./style/themes.scss";
@@ -17,7 +17,7 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   const [theme, setTheme] = useState("theme-dark");
-  const [lang, setLang] = useState('EN')
+  const { lang, setLang } = useLanguage();
 
   useEffect(() => {
     document.body.className = theme;
@@ -25,7 +25,6 @@ function App() {
   const getCssVar = (variable) => {
    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
   }
-  console.log(getComputedStyle(document.body).getPropertyValue("--accent-primary").trim());
   // eslint-disable-next-line react/prop-types
   const ThemeThumbIcon = ({ isActive }) => (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
@@ -47,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className={'${theme} ${lang}'}>
+    <div className={`${theme} ${lang}`}>
     <div  className='toggle-button'>
       <ToggleButton inactiveLabel={''}
         activeLabel={""}
@@ -68,7 +67,9 @@ function App() {
           },
         }}
         value={lang === "EN"}
-        onToggle={() => setLang(lang === "EN" ? "RO" : "EN")}/>
+        onToggle={() => setLang(lang === "EN" ? "RO" : "EN")}
+        />
+
       <ToggleButton
         inactiveLabel={''}
         activeLabel={""}
@@ -93,7 +94,9 @@ function App() {
       />
     </div>
       <div className="container">
-        <Profile />
+        
+          <Profile />
+        
         <AnimatePresence mode="wait">
         <motion.div
               key={activeSection}

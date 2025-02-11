@@ -9,14 +9,14 @@ $theme-dark: (
 );
 
 $theme-light: (
-  bg-primary: #FDFBFF,
-  bg-card: #FFFFFF,
-  accent-primary: #6B4FBB,
-  accent-secondary: #9D8CFF,
-  text-primary: #17151F,
-  text-secondary: #6B4FBB,
-  shadow: #E6E1F9,
-  hover: #F3F0FF
+  bg-primary: #F5F3FF, // Soft off-white for the background
+  bg-card: #FFFFFF, // Crisp white card background
+  accent-primary: #6B4FBB, // Keep the accent color consistent
+  accent-secondary: #9D8CFF, // Light purple, similar to dark theme
+  text-primary: #17151F, // Deep text color to ensure readability
+  text-secondary: #6B4FBB, // Lighter secondary text color for harmony
+  shadow: #E0D7FF, // Subtle shadow for depth
+  hover: #E9E5FF // S
 );
 
 // 🔥 Mixin pentru aplicarea temei

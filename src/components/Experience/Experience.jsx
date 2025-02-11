@@ -1,14 +1,25 @@
 import './Experience.scss'
 import "../../style/themes.scss";
+import { useEffect, useState } from 'react';
 
-import ExperienceData from './experience.json'
+import { useLanguage } from '../Lang/LanguageContext';
+import experienceData from './experience.json';
+
 function Experience() {
-  
+  const {lang, t} = useLanguage()
+
+  const [experience, setExperience] = useState([]);
+  const [education, setEducation] = useState([]);
+
+  useEffect(() => {
+      setExperience(experienceData[lang]?.experience || []);
+      setEducation(experienceData[lang]?.education || []);
+  }, [lang]);
   return (
     <section id='experience' className='experience-card'>
-      <h2>Education</h2>
+      <h2>{t.education}</h2>
       <div className='education shared-style'>
-      {ExperienceData.education.map((item, index) => (
+      {education.map((item, index) => (
           <div key={index} className='card'>
             <h3>{item.institution}</h3>
             <h4>{item.profile}</h4>
@@ -16,9 +27,9 @@ function Experience() {
           </div>
         ))}
       </div>
-        <h2>Experience</h2>
+        <h2>{t.experience}</h2>
         <div className='experience shared-style'>
-        {ExperienceData.experience.map((item, index) => (
+        {experience.map((item, index) => (
           <div key={index} className='card'>
             <h3>{item.position}</h3>
             <h4>{item.company}</h4>

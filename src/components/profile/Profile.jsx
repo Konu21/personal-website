@@ -7,9 +7,10 @@ import avatar from "../../../public/rb_9123.svg";
 import {MdPhone, MdEmail, MdLocationOn,MdCalendarMonth  } from "react-icons/md";
 import { FaLinkedin, FaInstagramSquare  } from "react-icons/fa";
 import { useTypewriter } from "react-simple-typewriter";
-
+import { useLanguage } from '../Lang/LanguageContext';
 
 function Profile() {
+  const { t } = useLanguage();
   const [typeEffect] = useTypewriter({
     words: ["Python Developer", "React Developer"],
     loop: true,
@@ -67,7 +68,7 @@ function Profile() {
         </div>
   ))}
       </div>
-      <button className='resume-button' onClick={handleDownload}>View Resume</button>
+      <button className='resume-button' onClick={handleDownload}>{t.resume}</button>
     </section>
   )
 }

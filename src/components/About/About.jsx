@@ -1,27 +1,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaintBrush, faServer } from '@fortawesome/free-solid-svg-icons';
+import { useLanguage } from '../Lang/LanguageContext';
+
 import './About.scss';
 import "../../style/themes.scss";
 
 function AboutSection() {
+   const { t } = useLanguage();
  
   return (
     <section
     id="about"
     className="about-card"
   >
-        <h2>About me</h2>
+        <h2>{t.about}</h2>
         
           <div className="about-intro">
-            <p className="highlight">
-            Passionate about software development, with a proactive mindset and solution orientation. I am always motivated to learn and adapt modern tools.            </p>
+            <p className="highlight">{t.about_highlight}</p>
           </div>
 
           <div className="expertise">
             <div className="expertise-item">
               <FontAwesomeIcon icon={faPaintBrush} />
-              <h3>Frontend Focus</h3>
-              <p>I deepen expertise in <strong>React</strong> and <strong>Figma</strong>, from UI/UX design to implementation of robust components.</p>
+              <h3>{t.frontend_focus}</h3>
+              <p dangerouslySetInnerHTML={{ __html: t.frontend_focus_text }} />
               <div className="skillTags">
                 <span className="skillTag">React</span>
                 <span className="skillTag">Figma</span>
@@ -30,8 +32,8 @@ function AboutSection() {
 
             <div className="expertise-item">
               <FontAwesomeIcon icon={faServer} />
-              <h3>Backend Connection</h3>
-              <p>I keep in touch with <strong>Python</strong> and <strong>Flask</strong>, building coherent solutions by understanding both areas.</p>
+              <h3>{t.backend_connection}</h3>
+              <p dangerouslySetInnerHTML={{ __html: t.backend_connection_text }} />
               <div className="skillTags">
                 <span className="skillTag">Python</span>
                 <span className="skillTag">Flask</span>
@@ -42,12 +44,12 @@ function AboutSection() {
           <div className="philosophy">
             <blockquote>
               <p>
-                “Technical skills are complemented by a communicative approach and attention to detail. I&apos;m looking for complex projects where I can balance the creativity of the frontend with the logic of the backend.&quot;
+                {t.philosophy}
               </p>
             </blockquote>
             
             <div className="skills">
-              {["Agile Methodology", "Problem Solving", "Continuous Learning"].map((skill, index) => (
+              {t.skills_about.map((skill, index) => (
                 <span key={index} className="skillTag">{skill}</span>
               ))}
             </div>

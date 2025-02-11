@@ -1,12 +1,13 @@
 import "./Skills.scss";
 import "../../style/themes.scss";
-
+import { useLanguage } from "../Lang/LanguageContext";
 import { useEffect, useRef } from "react";
 import SkillsData from "./skills.json";
 
 function Skills() {
   const trackRef = useRef(null);
-
+  const { t } = useLanguage();
+   
   useEffect(() => {
     const track = trackRef.current;
     if (track) {
@@ -16,7 +17,7 @@ function Skills() {
 
   return (
     <section id="skills" className="skills-card">
-      <h2>Skills</h2>
+      <h2>{t.skills}</h2>
       <div className="skills carousel-container">
         <div className="carousel-track" ref={trackRef}>
           {SkillsData.skills.concat(SkillsData.skills).map((item, index) => (
@@ -28,7 +29,7 @@ function Skills() {
         </div>
       </div>
 
-      <h2>Tools</h2>
+      <h2>{t.tools}</h2>
       <div className="tools shared-style">
         {SkillsData.tools.map((item, index) => (
           <div key={index} className="item">
