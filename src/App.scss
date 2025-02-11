@@ -1,8 +1,8 @@
 // 🎨 Definirea temelor
 @use "./style/themes.scss" as *;
-:root {
-  @include theme(light);
-}
+// :root {
+//   @include theme(dark);
+// }
 
 // 📌 Aplicarea temei
 .theme-dark {
