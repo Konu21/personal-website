@@ -25,7 +25,7 @@ function App() {
   const getCssVar = (variable) => {
    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
   }
-
+  console.log(getComputedStyle(document.body).getPropertyValue("--accent-primary").trim());
   // eslint-disable-next-line react/prop-types
   const ThemeThumbIcon = ({ isActive }) => (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
