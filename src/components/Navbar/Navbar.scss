@@ -52,7 +52,7 @@
 }
 @media (max-width:1250px){
  
-  position: fixed;
+  position: sticky;
   bottom: 1.5em;
   width: 80vw;
   padding-bottom: env(safe-area-inset-bottom);
