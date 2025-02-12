@@ -51,8 +51,8 @@
   }
 }
 @media (max-width:1250px){
- 
-  position: fixed;
+ margin-top: 1em;;
+  position: sticky;
   bottom: 1em;
   width: 80vw;
   z-index: 1000;
