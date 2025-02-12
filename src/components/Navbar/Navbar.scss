@@ -52,8 +52,11 @@
 }
 @media (max-width:1250px){
  
-    position: absolute;
-    bottom: 2em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1a1a2e;
+  padding-bottom: env(safe-area-inset-bottom);
   
   .navContent{
       flex-direction: row;
