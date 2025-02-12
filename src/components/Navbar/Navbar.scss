@@ -51,10 +51,9 @@
   }
 }
 @media (max-width:1250px){
-  position: fixed;
-  margin-top: 5em;;
-  bottom: 4em;
-  width: 80vw;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 2em;
   z-index: 1000;
   padding-bottom: env(safe-area-inset-bottom);
   
