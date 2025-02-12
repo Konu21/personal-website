@@ -53,11 +53,9 @@
 @media (max-width:1250px){
  
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 1em;
   width: 80vw;
   z-index: 1000;
-  height: 60px;
   padding-bottom: env(safe-area-inset-bottom);
   
   .navContent{
@@ -68,7 +66,7 @@
   @media (max-width: 768px) {
     .navContent {
       gap: 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
     }
     
     .navItem {
