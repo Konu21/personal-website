@@ -53,9 +53,8 @@
 @media (max-width:1250px){
  
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #1a1a2e;
+  bottom: 1.5em;
+  width: 80vw;
   padding-bottom: env(safe-area-inset-bottom);
   
   .navContent{
