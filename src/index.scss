@@ -1,11 +1,15 @@
+@use "./style/themes.scss" as *;
+
+
 html {
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
   min-height: 100vh;
-  overflow: auto;
+  // overflow: auto;
   margin: 0;
   padding-bottom: 1em; 
+  background-color: var(--bg-primary);
 }
