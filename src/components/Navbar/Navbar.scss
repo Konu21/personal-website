@@ -52,8 +52,8 @@
 }
 @media (max-width:1250px){
  
-    position: sticky;
-    bottom: 6vh;
+    position: absolute;
+    bottom: 2em;
   
   .navContent{
       flex-direction: row;
