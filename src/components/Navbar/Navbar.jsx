@@ -34,6 +34,8 @@ function Navbar({ setActiveSection }) {
             className="navItem"
             activeClass="active"
             onClick={() => setActiveSection(item.id)}
+            href={`#${item.id}`} 
+            role="link" 
           >
             <motion.div
               whileHover={{ rotate: 15 }}

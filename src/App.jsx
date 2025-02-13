@@ -28,7 +28,7 @@ function App() {
   // eslint-disable-next-line react/prop-types
   const ThemeThumbIcon = ({ isActive }) => (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-      {isActive ? <FaSun color="yellow" size={20} /> : <FaMoon color="white" size={20} />}
+      {isActive ? <FaSun id="light-mod-icon" color="yellow" size={20} /> : <FaMoon id="dark-mode-icon" color="white" size={20} />}
     </div>
   );
   
@@ -50,7 +50,7 @@ function App() {
     <div  className='toggle-button'>
       <ToggleButton inactiveLabel={''}
         activeLabel={""}
-        thumbIcon={<Flag  code={lang === "EN" ? "GB" : "RO"} className="lang-icon" />}
+        thumbIcon={<Flag code={lang === "EN" ? "GB" : "RO"} className="lang-icon" alt={lang === "EN" ? "English flag" : "Romanian flag"} />}
         thumbStyle={thumbStyle}
         thumbAnimateRange={[-10, 36]}
         
