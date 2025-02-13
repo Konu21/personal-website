@@ -25,12 +25,17 @@
         {
             "type": "linkedin",
             "label": "LinkedIn",
-            "value": "https://www.linkedin.com/in/bogdan-paun-1b1b3b1b3/"
+            "value": "https://www.linkedin.com/in/bogdan-paun-084044218/"
         },
         {
             "type": "instagram",
             "label": "Instagram",
-            "value": ""
+            "value": "https://www.instagram.com/bogdan.p98/"
+        },
+        {
+            "type": "github",
+            "label": "GitHub",
+            "value": "https://github.com/Konu21"
         }
     ]
 }

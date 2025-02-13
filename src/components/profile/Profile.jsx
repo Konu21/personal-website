@@ -5,7 +5,7 @@ import "../../style/themes.scss";
 import contactData from "./contact-info.json";
 import avatar from "../../../public/rb_9123.svg";
 import {MdPhone, MdEmail, MdLocationOn,MdCalendarMonth  } from "react-icons/md";
-import { FaLinkedin, FaInstagramSquare  } from "react-icons/fa";
+import { FaLinkedinIn , FaInstagram, FaGithub } from "react-icons/fa";
 import { useTypewriter } from "react-simple-typewriter";
 import { useLanguage } from '../Lang/LanguageContext';
 
@@ -28,9 +28,11 @@ function Profile() {
       case 'calendar':
         return <MdCalendarMonth />;
       case 'linkedin':
-        return <FaLinkedin />;
+        return <FaLinkedinIn  />;
       case 'instagram':
-        return <FaInstagramSquare />;
+        return <FaInstagram />;
+      case 'github':
+        return <FaGithub />
       default:
         return null;
     }

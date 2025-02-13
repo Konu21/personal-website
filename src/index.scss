@@ -1,14 +1,15 @@
-@use "./style/themes.scss" as *;
-
 
 html {
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
-  min-height: 100vh;
-  overflow: auto;
+  min-height: 100dvh;
+  // overflow: auto;
   margin: 0;
   padding-bottom: 1em; 
+  -webkit-overflow-scrolling: touch;
+
 }

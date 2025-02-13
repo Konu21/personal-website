@@ -50,13 +50,13 @@
     font-size: 0.95rem;
   }
 }
-@media (max-width:1250px){
-  position: sticky;
-  position: -webkit-sticky;
-  bottom: 2em;
-  z-index: 1000;
-  padding-bottom: env(safe-area-inset-bottom);
+@media screen and (max-width:1250px)  and (-webkit-min-device-pixel-ratio: 2){
   
+    position: sticky;
+    bottom: 1em;
+    z-index: 1000;
+    padding-bottom:env(safe-area-inset-bottom, 0);
+
   .navContent{
       flex-direction: row;
     }

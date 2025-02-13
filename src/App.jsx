@@ -20,7 +20,7 @@ function App() {
   const { lang, setLang } = useLanguage();
 
   useEffect(() => {
-    document.body.className = theme;
+    document.documentElement.className = theme;
   }, [theme]);
   const getCssVar = (variable) => {
    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
