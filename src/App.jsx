@@ -68,6 +68,7 @@ function App() {
         }}
         value={lang === "EN"}
         onToggle={() => setLang(lang === "EN" ? "RO" : "EN")}
+        aria-label={`Switch language to ${lang === "EN" ? "Romanian" : "English"}`}
         />
 
       <ToggleButton
@@ -91,6 +92,7 @@ function App() {
         }}
         value={theme === "theme-light"}
         onToggle={() => setTheme(theme === "theme-dark" ? "theme-light" : "theme-dark")}
+        aria-label={`Switch to ${theme === "theme-light" ? "dark" : "light"} theme`} 
       />
     </div>
       <div className="container">

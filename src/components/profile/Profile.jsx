@@ -59,7 +59,11 @@ function Profile() {
       <div className='social-media'>
         {contactData.social_media.map((item, index) => (
           <div key={index} className="contact-item">
-            <a href={item.value}>{getIcon(item.type)}</a>
+            <a
+        href={item.value}
+        aria-label={`Follow me on ${item.type.charAt(0).toUpperCase() + item.type.slice(1)}`} 
+        title={`Follow me on ${item.type.charAt(0).toUpperCase() + item.type.slice(1)}`}  
+      >{getIcon(item.type)}</a>
           </div>))}
       </div>
       <div className='contact'>
