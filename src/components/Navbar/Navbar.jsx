@@ -3,21 +3,24 @@ import {
   faUser, 
   faBriefcase, 
   faCode, 
-  faEnvelope 
+  faEnvelope ,faTasks 
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { useLanguage } from '../Lang/LanguageContext';
 
 import './Navbar.scss';
 import "../../style/themes.scss";
 
 function Navbar({ setActiveSection }) {
+  const { t } = useLanguage();
   const navItems = [
-    { id: 'about', title: 'About', icon: faUser },
-    { id: 'experience', title: 'Experience', icon: faBriefcase },
-    { id: 'skills', title: 'Skills', icon: faCode },
-    { id: 'contact', title: 'Contact', icon: faEnvelope },
+    { id: 'about', title: t.about, icon: faUser },
+    { id: 'experience', title: t.experience, icon: faBriefcase },
+    { id: 'projects', title: t.projects, icon: faTasks  },
+    { id: 'skills', title: t.skills, icon: faCode },
+    { id: 'contact', title: t.contact, icon: faEnvelope },
   ];
 
   return (

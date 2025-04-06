@@ -1,0 +1,28 @@
+{
+    "EN": [
+        {
+            "link": "https://dental-website-woad.vercel.app/",
+            "name": "Dental Website",
+            "description": "A user-friendly dental platform for booking appointments and viewing services. Responsive design.",
+            "img": "./dental-webiste-preview.png"
+        },
+        {
+            "link": "",
+            "name": "Coming Soon 🚧",
+            "description": "Crafting something brilliant behind the scenes... "
+        }
+    ],
+    "RO": [
+        {
+            "link": "https://dental-website-woad.vercel.app/",
+            "name": "Website pentru cabinet stomatologic",
+            "description": "Platformă online pentru programări și vizualizare servicii dentare. Interfață intuitivă, optimizată pe toate dispozitivele.",
+            "img": "./dental-webiste-preview.png"
+        },
+        {
+            "link": "",
+            "name": "În Curând ✨",
+            "description": "Lucrăm la ceva magic!"
+        }
+    ]
+}

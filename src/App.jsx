@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [theme, setTheme] = useState("theme-dark");
@@ -110,7 +111,8 @@ function App() {
             >
           {activeSection === "about" && <About />}
           {activeSection === "experience" && <Experience />}    
-          {activeSection === "skills" && <Skills />}  
+          {activeSection === "skills" && <Skills />} 
+           {activeSection === "projects" &&<Projects/>}
           {activeSection === "contact" && <Contact />}   
           </motion.div>
 
