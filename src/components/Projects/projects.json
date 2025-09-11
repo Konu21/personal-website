@@ -4,20 +4,44 @@
             "link": "https://dental-website-woad.vercel.app/",
             "name": "Dental Website",
             "description": "A user-friendly dental platform for booking appointments and viewing services. Responsive design.",
-            "img": "./dental-webiste-preview.png"
+            "img": "dental-webiste-preview.png"
+        },
+        {
+            "link": "https://grade-calc-nextjs.vercel.app/",
+            "name": "Student GPA Dashboard (In Progress)",
+            "description": "Full‑stack Next.js platform where students can calculate, track and compare GPAs. Secure login with Supabase and interactive charts.",
+            "img": "student-gpa-dashboard-preview.png"
+        },
+        {
+            "link": "https://barber-shop-template-two.vercel.app/",
+            "name": "Barber Shop Template",
+            "description": "Full‑stack barber shop website template with a booking system and admin dashboard. Real‑time availability, Google Calendar sync, email notifications, multilingual support and responsive design",
+            "img": "barber-shop-template-preview.png"
         },
         {
             "link": "",
             "name": "Coming Soon 🚧",
-            "description": "Crafting something brilliant behind the scenes... "
+            "description": "Crafting something brilliant behind the scenes..."
         }
     ],
     "RO": [
         {
             "link": "https://dental-website-woad.vercel.app/",
             "name": "Website pentru cabinet stomatologic",
-            "description": "Platformă online pentru programări și vizualizare servicii dentare. Interfață intuitivă, optimizată pe toate dispozitivele.",
-            "img": "./dental-webiste-preview.png"
+            "description": "Platformă online pentru programări și vizualizarea serviciilor dentare. Interfață intuitivă, optimizată pe toate dispozitivele.",
+            "img": "dental-webiste-preview.png"
+        },
+        {
+            "link": "https://grade-calc-nextjs.vercel.app/",
+            "name": "Dashboard GPA Studenți (In curs de dezvoltare)",
+            "description": "Platformă full‑stack Next.js unde studenții își pot calcula, urmări și compara GPA. Autentificare securizată cu Supabase și grafice interactive.",
+            "img": "student-gpa-dashboard-preview.png"
+        },
+        {
+            "link": "https://barber-shop-template-two.vercel.app/",
+            "name": "Template Barber Shop",
+            "description": "Website full‑stack pentru salon de frizerie cu sistem de rezervări și panou de administrare. Disponibilitate în timp real, sincronizare Google Calendar, notificări email, suport multilingv și design responsive",
+            "img": "barber-shop-template-preview.png"
         },
         {
             "link": "",
